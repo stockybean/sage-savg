@@ -84,8 +84,8 @@ class BladeSvgSage
         $config = collect(apply_filters('bladesvg', require($config)));
 
         return $config->merge([
-            'svg_path'         => $this->path($config->get('svg_path')),
-            'spritesheet_path' => $this->path($config->get('spritesheet_path'))
+            'svg_path'         => $config->get('svg_path'),
+            'spritesheet_path' => $config->get('spritesheet_path')
         ])->all();
     }
 
