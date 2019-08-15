@@ -1,10 +1,8 @@
-# Blade SVG for Sage
+# Blade SVG for Sage with Support for Wordpress Uploads Dir
 
-[![Latest Stable Version](https://poser.pugx.org/log1x/blade-svg-sage/v/stable)](https://packagist.org/packages/log1x/blade-svg-sage) [![Total Downloads](https://poser.pugx.org/log1x/blade-svg-sage/downloads)](https://packagist.org/packages/log1x/blade-svg-sage)
+Forked from [Blade SVG for Sage](https://github.com/Log1x/blade-svg-sage) by Brandon Nifong
 
 Blade SVG for Sage is a wrapper for [Blade SVG](https://github.com/adamwathan/blade-svg) by Adam Wathan allowing you to easily use SVG's in your Blade templates, either as an inline SVG or SVG sprite when using Sage 9.
-
-**Using Sage 10?** Check out [**Sage SVG**](https://github.com/Log1x/sage-svg).
 
 ## Requirements
 
@@ -17,12 +15,12 @@ Blade SVG for Sage is a wrapper for [Blade SVG](https://github.com/adamwathan/bl
 Install via Composer:
 
 ```bash
-$ composer require log1x/blade-svg-sage
+$ composer require stockybean/sage-svg
 ```
 
 ## Configuration
 
-Use the provided configuration filter below to modify the default configuration.
+Use the provided configuration filter below to modify the default configuration. 
 
 ```php
 add_filter('bladesvg', function () {
@@ -33,6 +31,20 @@ add_filter('bladesvg', function () {
         'sprite_prefix' => '',
         'inline' => true,
         'class' => ''
+    ];
+});
+// Blade SVG config
+add_filter('bladesvg', function () {
+    $upload_dir = wp_upload_dir();
+    $theme_dir = get_stylesheet_directory();
+
+    return [
+        'svg_path' => $upload_dir['basedir'] . '/assets',
+        'spritesheet_path' => $theme_dir . '/svg/spritesheet.svg',
+        'spritesheet_url' => '',
+        'sprite_prefix' => '',
+        'inline' => true,
+        'class' => 'inline-svg'
     ];
 });
 ```

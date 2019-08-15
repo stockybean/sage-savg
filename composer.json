@@ -1,13 +1,12 @@
 {
-  "name": "log1x/blade-svg-sage",
+  "name": "stockybean/sage-svg",
   "type": "package",
   "license": "MIT",
   "description": "Composer package to add support for Blade SVG by Adam Wathan to Roots Sage. Modified to allow path dir outside of theme folder.",
-  "homepage": "https://github.com/log1x/blade-svg-sage",
+  "homepage": "https://github.com/stockybean/sage-svg",
   "authors": [
     {
-      "name": "Brandon Nifong",
-      "email": "brandon@tendency.me"
+      "name": "Joel Duke"
     }
   ],
   "keywords": [
@@ -17,9 +16,6 @@
     "blade",
     "svg"
   ],
-  "support": {
-    "issues": "https://github.com/Log1x/blade-svg-sage/issues"
-  },
   "require": {
     "php": ">=7.0",
     "nothingworks/blade-svg": "^0.3.0"
