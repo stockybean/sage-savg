@@ -23,16 +23,6 @@ $ composer require stockybean/sage-svg
 Use the provided configuration filter below to modify the default configuration. 
 
 ```php
-add_filter('bladesvg', function () {
-    return [
-        'svg_path' => 'resources/svg',
-        'spritesheet_path' => 'resources/svg/spritesheet.svg',
-        'spritesheet_url' => '',
-        'sprite_prefix' => '',
-        'inline' => true,
-        'class' => ''
-    ];
-});
 // Blade SVG config
 add_filter('bladesvg', function () {
     $upload_dir = wp_upload_dir();
