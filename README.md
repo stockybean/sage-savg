@@ -10,14 +10,6 @@ Blade SVG for Sage is a wrapper for [Blade SVG](https://github.com/adamwathan/bl
 * [PHP](https://secure.php.net/manual/en/install.php) >= 7.0
 * [Composer](https://getcomposer.org/download/)
 
-## Installation
-
-Install via Composer:
-
-```bash
-$ composer require stockybean/sage-svg
-```
-
 ## Configuration
 
 Use the provided configuration filter below to modify the default configuration. 
